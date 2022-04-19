@@ -2,6 +2,7 @@
 
 class Usuarios {
     private $idUsuario ="";
+    private $nome ="";
     private $email ="";
     private $senha ="";
     private $cpf ="";
@@ -13,9 +14,11 @@ class Usuarios {
     private $telefone ="";
     private $foto ="";
     private $ativo ="";
+   
 
-    private function __construct($idUsuario,$email,$senha,$cpf,$endereco,$bairro,$cidade,$uf,$cep,$telefone,$foto,$ativo){
+    private function __construct($idUsuario,$nome,$email,$senha,$cpf,$endereco,$bairro,$cidade,$uf,$cep,$telefone,$foto,$ativo){
         $this->setIdUsuario($idUsuario);
+        $this->setNome($nome);
         $this->setEmail($email);
         $this->setSenha($senha);
         $this->setCpf($cpf);
@@ -28,6 +31,7 @@ class Usuarios {
         $this->setFoto($foto);
         $this->setAtivo($ativo);
         
+        
     }
     
     public function getIdUsuario(){
@@ -38,7 +42,13 @@ class Usuarios {
         $this->idUsuario = $idUsuario;
         return $this;
     }
-
+    public function getNome(){
+        return $this->ativo;
+    }
+    public function setNome($nome){
+        $this->nome = $nome;
+        return $this;
+    }
     public function getEmail(){
         return $this->email;
     }
@@ -137,6 +147,7 @@ class Usuarios {
         $this->ativo = $ativo;
         return $this;
     }
+   
 
 }
 ?>
